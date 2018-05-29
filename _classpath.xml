@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="call-sbb/src/main/java"/>
+	<classpathentry kind="src" path="call-sbb/src/main/resources"/>
+	<classpathentry kind="src" path="announcement-sbb/src/main/java"/>
+	<classpathentry kind="src" path="announcement-sbb/src/main/resources"/>
+	<classpathentry kind="src" path="du/src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="M2_REPO/javax/slee/jain-slee/1.1/jain-slee-1.1.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

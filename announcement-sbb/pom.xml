@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.mobicents</groupId>
+    <artifactId>CallBlocking</artifactId>
+    <version>1.0</version>
+  </parent>
+  <artifactId>announcement-sbb</artifactId>
+  <name>Restcomm :: ${project.artifactId} v${project.version}</name>
+  <dependencies>
+    <dependency>
+      <groupId>javax.slee</groupId>
+      <artifactId>jain-slee</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.sip</groupId>
+      <artifactId>jain-sip-api</artifactId>
+      <version>1.2.1.4</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mobicents.resources</groupId>
+      <artifactId>sip11-ratype</artifactId>
+      <version>2.9.94</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mobicents.resources</groupId>
+      <artifactId>mgcp-ratype</artifactId>
+      <version>7.1.13</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.restcomm.resources</groupId>
+      <artifactId>restcomm-slee-ra-jdbc-ratype</artifactId>
+      <version>7.2.0-113</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>

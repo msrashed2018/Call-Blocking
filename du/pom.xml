@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.mobicents</groupId>
+    <artifactId>CallBlocking</artifactId>
+    <version>1.0</version>
+  </parent>
+  <artifactId>CallBlocking-DU</artifactId>
+  <name>Restcomm :: ${project.artifactId} v${project.version}</name>
+  <dependencies>
+    <dependency>
+      <groupId>org.mobicents</groupId>
+      <artifactId>call-sbb</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+			<artifactId>announcement-sbb</artifactId>
+			<groupId>${pom.groupId}</groupId>
+			<version>${pom.version}</version>
+		</dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.mobicents.tools</groupId>
+        <artifactId>maven-du-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>copy-dependencies</goal>
+              <goal>generate-descriptor</goal>
+              <goal>generate-ant-management-script</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>deploy-DU</id>
+            <phase>install</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <tasks>
+                <copy file="target/${project.build.finalName}.jar" todir="${jboss.home}/server/${node}/deploy" overwrite="true" />
+              </tasks>
+            </configuration>
+          </execution>
+          <execution>
+            <id>undeploy-DU</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <tasks>
+                <delete file="${jboss.home}/server/${node}/deploy/${project.build.finalName}.jar" />
+              </tasks>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

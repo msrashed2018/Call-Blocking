@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-Description: JAIN SLEE Project created with Restcomm EclipSLEE 
+ v2.0.0.v20170525-1253
+Implementation-Title: org.mobicents:announcement-sbb
+Bundle-License: http://www.gnu.org/licenses/lgpl-2.1.html
+Bundle-SymbolicName: org.mobicents.announcement-sbb
+Implementation-Version: 1.0
+Built-By: mrashed
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1527523539391
+Implementation-Vendor-Id: TeleStax, Inc.
+Import-Package: jain.protocol.ip.mgcp,jain.protocol.ip.mgcp.message,ja
+ in.protocol.ip.mgcp.message.parms,jain.protocol.ip.mgcp.pkg,javax.nam
+ ing,javax.sip,javax.sip.address,javax.sip.header,javax.sip.message,ja
+ vax.slee,javax.slee.facilities,net.java.slee.resource.mgcp,net.java.s
+ lee.resource.sip
+Tool: Bnd-1.15.0
+Export-Package: com.iti.callblocking;uses:="jain.protocol.ip.mgcp.pkg,
+ javax.naming,jain.protocol.ip.mgcp.message,net.java.slee.resource.sip
+ ,javax.slee,javax.sip.message,javax.sip.address,jain.protocol.ip.mgcp
+ ,javax.slee.facilities,javax.sip.header,net.java.slee.resource.mgcp,j
+ ain.protocol.ip.mgcp.message.parms,javax.sip"
+Bundle-Version: 1.0.0
+Bundle-Name: Restcomm :: announcement-sbb v1.0
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.restcomm.org
+Build-Jdk: 1.8.0_161
+

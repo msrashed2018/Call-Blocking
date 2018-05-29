@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bundle-Description: JAIN SLEE Project created with Restcomm EclipSLEE 
+ v2.0.0.v20170525-1253
+Implementation-Title: org.mobicents:CallBlocking-sbb
+Bundle-License: http://www.gnu.org/licenses/lgpl-2.1.html
+Bundle-SymbolicName: org.mobicents.CallBlocking-sbb
+Implementation-Version: 1.0
+Built-By: mrashed
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1526605531877
+Implementation-Vendor-Id: TeleStax, Inc.
+Import-Package: jain.protocol.ip.mgcp,jain.protocol.ip.mgcp.message,ja
+ in.protocol.ip.mgcp.message.parms,jain.protocol.ip.mgcp.pkg,javax.nam
+ ing,javax.sip,javax.sip.address,javax.sip.header,javax.sip.message,ja
+ vax.slee,javax.slee.facilities,javax.slee.resource,net.java.slee.reso
+ urce.mgcp,net.java.slee.resource.sip,org.mobicents.slee,org.restcomm.
+ slee.resource.jdbc,org.restcomm.slee.resource.jdbc.event,org.restcomm
+ .slee.resource.jdbc.task,org.restcomm.slee.resource.jdbc.task.simple
+Tool: Bnd-1.15.0
+Export-Package: com.iti.slee;uses:="com.iti.database,org.restcomm.slee
+ .resource.jdbc.task,jain.protocol.ip.mgcp.pkg,org.restcomm.slee.resou
+ rce.jdbc,org.mobicents.slee,javax.naming,jain.protocol.ip.mgcp.messag
+ e,net.java.slee.resource.sip,org.restcomm.slee.resource.jdbc.event,ja
+ vax.sip.address,javax.slee,javax.sip.message,jain.protocol.ip.mgcp,ja
+ vax.slee.facilities,javax.sip.header,org.restcomm.slee.resource.jdbc.
+ task.simple,net.java.slee.resource.mgcp,javax.slee.resource,jain.prot
+ ocol.ip.mgcp.message.parms,javax.sip",com.iti.database;uses:="org.res
+ tcomm.slee.resource.jdbc.task,org.restcomm.slee.resource.jdbc.task.si
+ mple"
+Bundle-Version: 1.0.0
+Bundle-Name: Restcomm :: CallBlocking-sbb v1.0
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.restcomm.org
+Build-Jdk: 1.8.0_161
+
