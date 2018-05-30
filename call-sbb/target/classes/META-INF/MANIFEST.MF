@@ -7,22 +7,23 @@ Bundle-SymbolicName: org.mobicents.call-sbb
 Implementation-Version: 1.0
 Built-By: mrashed
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1527523538174
+Bnd-LastModified: 1527655867949
 Implementation-Vendor-Id: TeleStax, Inc.
-Import-Package: javax.naming,javax.sip,javax.sip.address,javax.sip.hea
- der,javax.sip.message,javax.slee,javax.slee.facilities,javax.slee.res
- ource,net.java.slee.resource.sip,org.mobicents.slee,org.restcomm.slee
- .resource.jdbc,org.restcomm.slee.resource.jdbc.event,org.restcomm.sle
- e.resource.jdbc.task,org.restcomm.slee.resource.jdbc.task.simple
+Import-Package: com.iti.callblocking.events,javax.naming,javax.sip,jav
+ ax.sip.address,javax.sip.header,javax.sip.message,javax.slee,javax.sl
+ ee.facilities,javax.slee.resource,net.java.slee.resource.sip,org.mobi
+ cents.slee,org.restcomm.slee.resource.jdbc,org.restcomm.slee.resource
+ .jdbc.event,org.restcomm.slee.resource.jdbc.task,org.restcomm.slee.re
+ source.jdbc.task.simple
 Tool: Bnd-1.15.0
-Export-Package: com.iti.database;uses:="org.restcomm.slee.resource.jdb
- c.task,org.restcomm.slee.resource.jdbc.task.simple",com.iti.callblock
- ing;uses:="com.iti.database,org.restcomm.slee.resource.jdbc.task,org.
- restcomm.slee.resource.jdbc,javax.naming,org.mobicents.slee,net.java.
- slee.resource.sip,org.restcomm.slee.resource.jdbc.event,javax.sip.add
- ress,javax.slee,javax.sip.message,javax.slee.facilities,javax.sip.hea
- der,org.restcomm.slee.resource.jdbc.task.simple,javax.slee.resource,j
- avax.sip"
+Export-Package: com.iti.callblocking;uses:="org.restcomm.slee.resource
+ .jdbc.task,org.restcomm.slee.resource.jdbc,org.mobicents.slee,javax.n
+ aming,com.iti.callblocking.events,net.java.slee.resource.sip,org.rest
+ comm.slee.resource.jdbc.event,javax.sip.message,javax.sip.address,jav
+ ax.slee,javax.slee.facilities,javax.sip.header,org.restcomm.slee.reso
+ urce.jdbc.task.simple,com.iti.callblocking.database,javax.slee.resour
+ ce,javax.sip",com.iti.callblocking.database;uses:="org.restcomm.slee.
+ resource.jdbc.task,org.restcomm.slee.resource.jdbc.task.simple"
 Bundle-Version: 1.0.0
 Bundle-Name: Restcomm :: call-sbb v1.0
 Created-By: Apache Maven Bundle Plugin

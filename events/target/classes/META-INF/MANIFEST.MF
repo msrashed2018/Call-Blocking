@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-Description: JAIN SLEE Project created with Restcomm EclipSLEE 
+ v2.0.0.v20170525-1253
+Implementation-Title: org.mobicents:callblocking-events
+Bundle-License: http://www.gnu.org/licenses/lgpl-2.1.html
+Bundle-SymbolicName: org.mobicents.callblocking-events
+Implementation-Version: 1.0
+Built-By: mrashed
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1527655866752
+Implementation-Vendor-Id: TeleStax, Inc.
+Import-Package: javax.sip,javax.sip.address
+Tool: Bnd-1.15.0
+Export-Package: com.iti.callblocking.events;uses:="javax.sip.address,j
+ avax.sip"
+Bundle-Version: 1.0.0
+Bundle-Name: Restcomm :: callblocking-events v1.0
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.restcomm.org
+Build-Jdk: 1.8.0_161
+

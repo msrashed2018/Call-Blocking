@@ -15,7 +15,9 @@
   <description>JAIN SLEE Project created with Restcomm EclipSLEE v2.0.0.v20170525-1253</description>
   <modules>
     <module>call-sbb</module>
+    <module>b2bua-sbb</module>
     <module>announcement-sbb</module>
+    <module>events</module>
     <module>du</module>
   </modules>
   <repositories>

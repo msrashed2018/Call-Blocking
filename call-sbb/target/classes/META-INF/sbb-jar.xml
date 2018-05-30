@@ -14,19 +14,26 @@
             <sbb-version>1.0</sbb-version>
             <sbb-alias>AnnouncementSbb</sbb-alias>
         </sbb-ref>
+        <sbb-ref>
+            <sbb-name>B2buaSbb</sbb-name>
+            <sbb-vendor>com.iti</sbb-vendor>
+            <sbb-version>1.0</sbb-version>
+            <sbb-alias>B2buaSbb</sbb-alias>
+        </sbb-ref>
         <sbb-classes>
             <sbb-abstract-class>
                 <sbb-abstract-class-name>com.iti.callblocking.CallSbb</sbb-abstract-class-name>
-                <cmp-field>
-                    <cmp-field-name>incomingDialog</cmp-field-name>
-                </cmp-field>
-                <cmp-field>
-                    <cmp-field-name>outgoingDialog</cmp-field-name>
-                </cmp-field>
                 <get-child-relation-method>
                     <sbb-alias-ref>AnnouncementSbb</sbb-alias-ref>
                     <get-child-relation-method-name>
 						getAnnouncementSbbChild
+					</get-child-relation-method-name>
+                    <default-priority>0</default-priority>
+                </get-child-relation-method>
+                <get-child-relation-method>
+                    <sbb-alias-ref>B2buaSbb</sbb-alias-ref>
+                    <get-child-relation-method-name>
+						getB2buaSbbChild
 					</get-child-relation-method-name>
                     <default-priority>0</default-priority>
                 </get-child-relation-method>
@@ -41,36 +48,12 @@
             </event-type-ref>
             <initial-event-select variable="ActivityContext"/>
         </event>
-        <event event-direction="Receive" initial-event="False">
-            <event-name>BYE</event-name>
+        <event event-direction="Fire" initial-event="False">
+            <event-name>CallCreated</event-name>
             <event-type-ref>
-                <event-type-name>javax.sip.Dialog.BYE</event-type-name>
-                <event-type-vendor>net.java.slee</event-type-vendor>
-                <event-type-version>1.2</event-type-version>
-            </event-type-ref>
-        </event>
-        <event event-direction="Receive" initial-event="False">
-            <event-name>CANCEL</event-name>
-            <event-type-ref>
-                <event-type-name>javax.sip.message.Request.CANCEL</event-type-name>
-                <event-type-vendor>net.java.slee</event-type-vendor>
-                <event-type-version>1.2</event-type-version>
-            </event-type-ref>
-        </event>
-        <event event-direction="Receive" initial-event="False">
-            <event-name>2xxResponse</event-name>
-            <event-type-ref>
-                <event-type-name>javax.sip.message.Response.SUCCESS</event-type-name>
-                <event-type-vendor>net.java.slee</event-type-vendor>
-                <event-type-version>1.2</event-type-version>
-            </event-type-ref>
-        </event>
-        <event event-direction="Receive" initial-event="False">
-            <event-name>1xxResponse</event-name>
-            <event-type-ref>
-                <event-type-name>javax.sip.message.Response.PROVISIONAL</event-type-name>
-                <event-type-vendor>net.java.slee</event-type-vendor>
-                <event-type-version>1.2</event-type-version>
+                <event-type-name>com.iti.callblocking.events.CallCreated</event-type-name>
+                <event-type-vendor>com.iti</event-type-vendor>
+                <event-type-version>1.0</event-type-version>
             </event-type-ref>
         </event>
         <event event-direction="Receive" initial-event="False">
@@ -87,22 +70,6 @@
                 <event-type-name>JdbcTaskExecutionThrowableEvent</event-type-name>
                 <event-type-vendor>org.restcomm</event-type-vendor>
                 <event-type-version>1.0</event-type-version>
-            </event-type-ref>
-        </event>
-        <event event-direction="Receive" initial-event="False">
-            <event-name>4xxResponse</event-name>
-            <event-type-ref>
-                <event-type-name>javax.sip.message.Response.CLIENT_ERROR</event-type-name>
-                <event-type-vendor>net.java.slee</event-type-vendor>
-                <event-type-version>1.2</event-type-version>
-            </event-type-ref>
-        </event>
-        <event event-direction="Receive" initial-event="False">
-            <event-name>6xxResponse</event-name>
-            <event-type-ref>
-                <event-type-name>javax.sip.message.Response.GLOBAL_FAILURE</event-type-name>
-                <event-type-vendor>net.java.slee</event-type-vendor>
-                <event-type-version>1.2</event-type-version>
             </event-type-ref>
         </event>
         <resource-adaptor-type-binding>

@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-Description: JAIN SLEE Project created with Restcomm EclipSLEE 
+ v2.0.0.v20170525-1253
+Implementation-Title: org.mobicents:b2bua-sbb
+Bundle-License: http://www.gnu.org/licenses/lgpl-2.1.html
+Bundle-SymbolicName: org.mobicents.b2bua-sbb
+Implementation-Version: 1.0
+Built-By: mrashed
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1527655868642
+Implementation-Vendor-Id: TeleStax, Inc.
+Import-Package: com.iti.callblocking.events,javax.naming,javax.sip,jav
+ ax.sip.address,javax.sip.header,javax.sip.message,javax.slee,javax.sl
+ ee.facilities,net.java.slee.resource.sip
+Tool: Bnd-1.15.0
+Export-Package: com.iti.callblocking;uses:="javax.slee,javax.sip.addre
+ ss,javax.sip.message,javax.slee.facilities,javax.sip.header,javax.nam
+ ing,com.iti.callblocking.events,javax.sip,net.java.slee.resource.sip"
+Bundle-Version: 1.0.0
+Bundle-Name: Restcomm :: b2bua-sbb v1.0
+Created-By: Apache Maven Bundle Plugin
+Implementation-URL: http://www.restcomm.org
+Build-Jdk: 1.8.0_161
+

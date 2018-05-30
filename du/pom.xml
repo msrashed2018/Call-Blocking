@@ -11,16 +11,27 @@
   <name>Restcomm :: ${project.artifactId} v${project.version}</name>
   <dependencies>
     <dependency>
-      <groupId>org.mobicents</groupId>
-      <artifactId>call-sbb</artifactId>
-      <version>1.0</version>
+	<artifactId>call-sbb</artifactId>
+      	<groupId>${pom.groupId}</groupId>
+      	<version>${pom.version}</version>
+    </dependency>
+	<dependency>
+	<artifactId>b2bua-sbb</artifactId>
+      	<groupId>${pom.groupId}</groupId>
+      	<version>${pom.version}</version>
     </dependency>
     <dependency>
-			<artifactId>announcement-sbb</artifactId>
-			<groupId>${pom.groupId}</groupId>
-			<version>${pom.version}</version>
-		</dependency>
+	<artifactId>announcement-sbb</artifactId>
+	<groupId>${pom.groupId}</groupId>
+	<version>${pom.version}</version>
+    </dependency>
+    <dependency>
+	<artifactId>callblocking-events</artifactId>
+	<groupId>${pom.groupId}</groupId>
+	<version>${pom.version}</version>
+    </dependency>
   </dependencies>
+
   <build>
     <plugins>
       <plugin>
