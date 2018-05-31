@@ -7,7 +7,7 @@ Bundle-SymbolicName: org.mobicents.CallBlocking-DU
 Implementation-Version: 1.0
 Built-By: mrashed
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1527655869971
+Bnd-LastModified: 1527736373866
 Implementation-Vendor-Id: TeleStax, Inc.
 Tool: Bnd-1.15.0
 Bundle-Version: 1.0.0

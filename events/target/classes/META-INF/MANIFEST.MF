@@ -7,7 +7,7 @@ Bundle-SymbolicName: org.mobicents.callblocking-events
 Implementation-Version: 1.0
 Built-By: mrashed
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1527655866752
+Bnd-LastModified: 1527736370415
 Implementation-Vendor-Id: TeleStax, Inc.
 Import-Package: javax.sip,javax.sip.address
 Tool: Bnd-1.15.0

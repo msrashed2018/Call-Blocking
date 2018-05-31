@@ -7,7 +7,7 @@ Bundle-SymbolicName: org.mobicents.call-sbb
 Implementation-Version: 1.0
 Built-By: mrashed
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1527655867949
+Bnd-LastModified: 1527736371776
 Implementation-Vendor-Id: TeleStax, Inc.
 Import-Package: com.iti.callblocking.events,javax.naming,javax.sip,jav
  ax.sip.address,javax.sip.header,javax.sip.message,javax.slee,javax.sl
