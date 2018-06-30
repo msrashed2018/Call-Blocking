@@ -40,12 +40,55 @@ If the partyB profile has a whitelist containing the caller (PartyA), the select
 
 
 
-## Running the Project  
 
+
+
+
+
+
+
+
+
+
+### Setup  
 
 **All needed binaries and libraries are available in the following links:**  
 	1- https://github.com/msrashed2018/Call-Blocking/tree/master/lib  
-	2- https://github.com/msrashed2018/Call-Blocking/releases  
+	2- https://github.com/msrashed2018/Call-Blocking/releases   
+
+
+#### Pre-Install Requirements and Prerequisites  
+Ensure that the following requirements have been met before continuing with the install.
+
+#### Hardware Requirements  
+The Application doesn't change the Restcomm JAIN SLEE Hardware Requirements, refer to Restcomm JAIN SLEE documentation for more information.  
+
+#### Software Prerequisites  
+**A. Restcomm slee  wildfly Server Container**  
+The application requires Restcomm JAIN SLEE properly set, with following list of dependencies deployed/started.
+	**MGCP RA**
+	It is required that MGCP RA is deployed. The MGCP RA is responsible to fire the MGCP Events corresponding to MGCP Request/Response received from Media Gateway 	    	server.
+	**SIP11 RA**
+	It is required that SIP11 RA is deployed. The SIP RA is responsible to fire the SIP Events like INVITE, BYE etc received from SIP User Agents
+	**JDBC RA**
+	It is required that JDBC RA is deployed. The JDBC RA is responsible to receive the JDBC Events like Jdbc Task Execution Throwable Event and Simple Jdbc Task Result 	Event.
+	**Postgresql driver**
+	It is required that postgresql driver is deployed. The postgresql is responsible to interact with wildfly server datasource.  
+
+**B. Restcomm Media Server:**  
+The application sends MGCP Signals to Media Gateway (Media Server) to play announcements and also requests ONCOMPLETE and ONFAILURE events to be notified back to Application. The media part is taken care by Restcomm Media Server; it is required that Restcomm Media Server is started before the User dials respective digits to application.
+
+**C. Postgresql Database Server:**  
+The application sends JDBC queries to Postgresql database server to get information about SIP users like address, blacklist and white list numbers. It is required that Postgresql Database Server is started before the User dials respective digits to application.
+
+**D. SIP Phone:**  
+Any sip phone can be used to making VOIP call but make sure that it support voice codecs as same as  media server gateway support. We have used Linphone and SimpleSip soft phone for our demo and you can download it for free.
+
+
+## Running the Project  
+
+
+
 
 ### Steps  
 
