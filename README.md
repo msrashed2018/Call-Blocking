@@ -1,6 +1,43 @@
 # Call-Blocking
 
 
+
+## Design Overview  
+
+We have implemented a Call blocking service application that requires the usage of both MGCP and SIP protocols. The application consists of a third party call control based on a central back-to-back UA (B2BUA), where the caller (UAC) perform a call towards a callee (UAS). Depending on the callee has blacklist or whitelist containing the caller or not, the call will be forwarded or ended with played announcement.  
+
+	**BlackList:** numbers that you wish to block, while allowing the rest of the calls to reach you. You can activate it all the day or on a specific time frame.
+	**WhileList:** numbers that are allowed to reach you, while appearing unavailable to the rest of the callers. You can activate it all the day or on specific time 					   frame.  
+
+**Note:** If a conflict happens between the time frame of blacklist and white list, the priority will go to the whitelist and will be activated.
+The call blocking control unit is implemented by a Restcomm JSLEE which acts as an Application Server (AS) implementing both the SIP B2BUA and the MGCP CA.
+
+#### There are five main signaling entities are involved:  
+
+	**1. SIP UAC:** which represents caller (PartyA).
+	**2. Call Screening Server:** act as SIP Proxy Server and MGCP Call Agent.
+	**3. Media Gateway Server.**
+	**4. SIP UAS:** which represents callee (PartyB).
+	**5. Database:** to store Users profiles.
+
+
+#### Signaling flow  
+
+It is started by the SIP UAC, which sends a SIP INVITE message towards the Application Server (AS). 
+When this INVITE is received, the AS event routing subsystem is invoked and a Selector root SBB is created. It immediately queries the DB in order to retrieve the partyB profile. 
+Now the Selector SBB has all the information needed and at this point there are two Scenarios  can be happened:
+**Scenario 1**  
+If the partyB profile has a blacklist containing partyA, the selector SBB will create child sbb (Annoucement-SBB) which handle a connection with media server and send NOTIFYREQUEST with to make media server play announcement over RTP. After announcement is completed the media server will send NOTIFY to AS and the AS will terminate call by sending BYE message to the caller.
+
+![Alt text](https://github.com/msrashed2018/Call-Blocking/blob/master/img/scenario1.png?raw=true "scenario1")  
+
+Scenario 2
+If the partyB profile has a whitelist containing the caller (PartyA), the selector SBB will create child SBB (B2BUA-SBB) which setup call between partyA (UAC) and partyB UAS using SIP B2BUA implementation.
+
+![Alt text](https://github.com/msrashed2018/Call-Blocking/blob/master/img/scenario2.png?raw=true "scenario1")  
+
+
+
 ## Running the Project  
 
 
