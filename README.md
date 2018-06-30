@@ -65,16 +65,16 @@ The Application doesn't change the Restcomm JAIN SLEE Hardware Requirements, ref
 
 #### Software Prerequisites  
 **A. Restcomm slee  wildfly Server Container**  
-The application requires Restcomm JAIN SLEE properly set, with following list of dependencies deployed/started.
-	**MGCP RA**
-	It is required that MGCP RA is deployed. The MGCP RA is responsible to fire the MGCP Events corresponding to MGCP Request/Response received from Media Gateway 	    	server.
-	**SIP11 RA**
-	It is required that SIP11 RA is deployed. The SIP RA is responsible to fire the SIP Events like INVITE, BYE etc received from SIP User Agents
-	**JDBC RA**
-	It is required that JDBC RA is deployed. The JDBC RA is responsible to receive the JDBC Events like Jdbc Task Execution Throwable Event and Simple Jdbc Task Result 	Event.
-	**Postgresql driver**
-	It is required that postgresql driver is deployed. The postgresql is responsible to interact with wildfly server datasource.  
-
+The application requires Restcomm JAIN SLEE properly set, with following list of dependencies deployed/started.  
+	**1.MGCP RA**
+	It is required that MGCP RA is deployed. The MGCP RA is responsible to fire the MGCP Events corresponding to MGCP Request/Response received from Media Gateway 	    	server.  
+	**2.SIP11 RA**  
+	It is required that SIP11 RA is deployed. The SIP RA is responsible to fire the SIP Events like INVITE, BYE etc received from SIP User Agents  
+	**3.JDBC RA**  
+	It is required that JDBC RA is deployed. The JDBC RA is responsible to receive the JDBC Events like Jdbc Task Execution Throwable Event and Simple Jdbc Task Result 	Event.  
+	**4.Postgresql driver**    
+	It is required that postgresql driver is deployed. The postgresql is responsible to interact with wildfly server datasource.    
+ 
 **B. Restcomm Media Server:**  
 The application sends MGCP Signals to Media Gateway (Media Server) to play announcements and also requests ONCOMPLETE and ONFAILURE events to be notified back to Application. The media part is taken care by Restcomm Media Server; it is required that Restcomm Media Server is started before the User dials respective digits to application.
 
