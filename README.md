@@ -14,11 +14,11 @@ The call blocking control unit is implemented by a Restcomm JSLEE which acts as 
 
 #### There are five main signaling entities are involved:  
 
-	**1.SIP UAC:** which represents caller (PartyA).  
-	**2.Call Screening Server:** act as SIP Proxy Server and MGCP Call Agent.  
-	**3.Media Gateway Server.**  
-	**4.SIP UAS:** which represents callee (PartyB).  
-	**5.Database:** to store Users profiles.  
+**1.SIP UAC:** which represents caller (PartyA).  
+**2.Call Screening Server:** act as SIP Proxy Server and MGCP Call Agent.  
+**3.Media Gateway Server.**  
+**4.SIP UAS:** which represents callee (PartyB).  
+**5.Database:** to store Users profiles.  
 
 
 #### Signaling flow  
